@@ -1,17 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace CodeChallenge.Models
 {
     public class Employee
     {
-        public String EmployeeId { get; set; }
-        public String FirstName { get; set; }
-        public String LastName { get; set; }
-        public String Position { get; set; }
-        public String Department { get; set; }
+        [System.ComponentModel.DataAnnotations.Key]
+        public string EmployeeId { get; set; }
+
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Position { get; set; }
+        public string Department { get; set; }
         public List<Employee> DirectReports { get; set; }
     }
 }
