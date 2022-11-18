@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using CodeChallenge.Services;
 using CodeChallenge.Models;
@@ -33,7 +29,7 @@ namespace CodeChallenge.Controllers
         }
 
         [HttpGet("{id}", Name = "getEmployeeById")]
-        public IActionResult GetEmployeeById(String id)
+        public IActionResult GetEmployeeById(string id)
         {
             _logger.LogDebug($"Received employee get request for '{id}'");
 
@@ -46,7 +42,7 @@ namespace CodeChallenge.Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult ReplaceEmployee(String id, [FromBody]Employee newEmployee)
+        public IActionResult ReplaceEmployee(string id, [FromBody]Employee newEmployee)
         {
             _logger.LogDebug($"Recieved employee update request for '{id}'");
 
